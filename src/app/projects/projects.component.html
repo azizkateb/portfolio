@@ -1,0 +1,21 @@
+<section class="projects-section" id="projects">
+  <h2 class="projects-title">My Projects</h2>
+
+  <div class="projects-grid">
+    <div
+      class="project-card animate-up"
+      *ngFor="let project of projects; let i = index"
+      [ngClass]="'delay-' + i"
+    >
+      <img [src]="project.image" [alt]="project.title" class="project-image" />
+
+      <div class="project-info">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        <a *ngIf="project.link" [href]="project.link" target="_blank" class="project-link">
+          View Project
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

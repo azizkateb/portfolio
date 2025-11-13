@@ -1,0 +1,207 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+/* --- HEADER --- */
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, #ff0000, #e34005);
+  border-image-slice: 1;
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
+  padding: 0 40px;
+  transition: all 0.3s ease;
+}
+
+/* --- LOGO --- */
+.logo a {
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+.logo-link:hover .logo-name {
+  text-shadow: 0 0 15px rgba(243, 74, 22, 0.7);
+  transform: scale(1.05);
+}
+.logo-link:hover .logo-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  transform: scale(1.03);
+}
+
+.logo-name {
+  background: linear-gradient(to right, #fa5e03, #ff7a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.logo-name:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(232, 44, 6, 0.7);
+}
+
+.logo-text {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* --- NAV LINKS --- */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  translate: 0 -50%;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  z-index: 90;
+  transition: all 0.3s ease;
+  zoom: 1.2;
+}
+
+.nav-links div {
+  transition: transform 0.3s ease;
+}
+
+.nav-links div:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+/* Gradient hover + glow effect */
+.nav-links a:hover {
+  background: linear-gradient(to right, #ed4705, #f21307);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(-2px) scale(1.1);
+  text-shadow: 0 2px 6px rgba(255, 51, 0, 0.4);
+}
+
+/* Underline gradient animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -6px;
+  background: linear-gradient(to right, #f00d05, #f30a0a);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* --- MENU TOGGLE (mobile) --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #ffcc00, #ff7a00);
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Burger open animation */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    transform: none;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: rgba(15, 15, 15, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

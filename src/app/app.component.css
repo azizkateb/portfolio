@@ -1,0 +1,46 @@
+.parent {
+  display: grid;
+  grid-template-areas:
+    "head"
+    "vedio"
+    "Services"
+    "About"
+    "Project"
+    "social"
+    "foot";
+  grid-template-rows: auto auto auto auto auto 300px auto;
+  gap: 8px;
+  margin-top: 80px; 
+}
+
+.head {
+  grid-area: head;
+  height: 100%;       
+  position: relative; 
+  overflow: hidden;   
+}
+
+.vedio {
+  grid-area: vedio;
+  width: 100%;   
+  height: 100%;  
+  margin: 0;     
+  padding: 0;
+}
+
+.Services{
+    grid-area: Services;
+    width: 100%;
+}
+.About{
+    grid-area: About;
+}
+.Project{
+    grid-area: Project;
+}
+.social{
+    grid-area: social;
+}
+.foot{
+    grid-area: foot;
+}

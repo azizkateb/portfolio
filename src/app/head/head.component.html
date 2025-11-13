@@ -1,0 +1,22 @@
+<header class="navbar">
+  <div class="logo">
+    <a href="#" class="logo-link">
+      <span class="logo-name">Aziz|</span> 
+      <span class="logo-text">|Portfolio</span>
+    </a>
+  </div>
+
+  <nav class="nav-links" [class.open]="menuOpen">
+    <div><a href="#home">Home</a></div>
+    <div><a href="#services">Services</a></div>
+    <div><a href="#projects">Projects</a></div>
+    <div><a href="#about">About</a></div>
+    <div><a href="#contact">Contact</a></div>
+  </nav>
+
+  <div class="menu-toggle" [class.open]="menuOpen" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>

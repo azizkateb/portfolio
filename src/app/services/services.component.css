@@ -1,0 +1,85 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+/* --- Services Container --- */
+.services-container {
+  grid-area: Services;
+  padding: 80px 5%;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+/* --- Services Title --- */
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, #ee0505, #fc0707);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* --- Services Grid --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* --- Service Card --- */
+.service-card {
+  background-color: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: box-shadow 1s ease-in-out, filter 1s ease-in-out;
+  cursor: pointer;
+}
+
+/* --- Hover Glow Effect Only --- */
+.service-card:hover {
+  box-shadow: 0 15px 40px rgba(246, 12, 12, 0.5),
+              0 0 25px rgba(135, 52, 37, 0.3) inset;
+  filter: brightness(1.2);
+}
+
+/* --- Service Card Content --- */
+.service-card .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* --- Scroll Animations --- */
+.animate-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Optional: staggered delay for multiple cards */
+.service-card:nth-child(1).in-view { transition-delay: 0.3s; }
+.service-card:nth-child(2).in-view { transition-delay: 0.5s; }
+.service-card:nth-child(3).in-view { transition-delay: 0.7s; }
+.service-card:nth-child(4).in-view { transition-delay: 0.9s; }
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

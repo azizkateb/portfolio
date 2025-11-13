@@ -1,0 +1,11 @@
+<div class="services-container" #servicesContainer id="services">
+  <h2 class="services-title animate-up">Our Services</h2>
+
+  <div class="services-grid">
+    <div class="service-card animate-up" *ngFor="let service of services">
+      <div class="icon">{{service.icon}}</div>
+      <h3>{{service.title}}</h3>
+      <p>{{service.description}}</p>
+    </div>
+  </div>
+</div>
