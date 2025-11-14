@@ -18,7 +18,7 @@ interface Project {
 export class ProjectsComponent implements AfterViewInit {
   projects: Project[] = [
     { title: 'Portfolio Website', description: 'Angular portfolio with animations.', image: 'porfolio3d.png', link: '#' },
-    { title: 'E-commerce App', description: 'Responsive shopping site.', image: 'tendances-e-commerce-2021-.jpg', link: '#' },
+    { title: 'E-commerce App', description: 'Responsive shopping site.', image: 'tendances-e-commerce-2021-.jpg', link: 'https://azizkateb.github.io/Market/' },
     { title: 'Blog Platform', description: 'Blog with comments and auth.', image: 'Blog-intro.jpg', link: '#' },
     { title: 'Task Manager', description: 'Manage tasks with drag-and-drop.', image: 'task.jpg', link: '#' },
   ];
