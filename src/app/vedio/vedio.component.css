@@ -55,6 +55,6 @@ p{
   }
   100% {
     opacity: 1;
-    transform: translateX(900px);
+    transform: translateX(75vh);
   }
 }
