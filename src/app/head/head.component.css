@@ -13,6 +13,9 @@
 }
 
 /* --- HEADER --- */
+.nav-links a {
+  cursor: pointer;
+}
 header.navbar {
   position: fixed;
   top: 0;
