@@ -59,7 +59,7 @@ header.navbar {
   transition: all 0.3s ease;
 }
 .logo-link:hover .logo-name {
-  text-shadow: 0 0 15px rgba(243, 74, 22, 0.7);
+  text-shadow: 0 0 15px rgba(250, 6, 6, 0.7);
   transform: scale(1.05);
 }
 .logo-link:hover .logo-text {
@@ -68,7 +68,7 @@ header.navbar {
 }
 
 .logo-name {
-  background: linear-gradient(to right, #fa5e03, #ff7a00);
+  background-color: #e34005;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
